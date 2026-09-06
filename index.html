@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Booking.com Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Search Header -->
+    <header class="serp-header">
+        <div class="header-left">
+            <div class="search-logo">S<span>earch</span></div>
+            <div class="search-input-box">
+                <input type="text" id="searchInput" value="contact booking.com">
+                <button class="clear-btn">&times;</button>
+                <div class="v-divider"></div>
+                <button class="mic-btn">🎤</button>
+            </div>
+        </div>
+        <div class="lang-switch">
+            <button id="langEnBtn" class="lang-btn active">EN</button>
+            <button id="langFrBtn" class="lang-btn">FR</button>
+        </div>
+    </header>
+
+    <!-- Main Search Results Container -->
+    <main class="results-container">
+
+        <!-- Result 1: Primary Booking.com Customer Support -->
+        <article class="result-item">
+            <h2 class="result-title">
+                <a href="tel:+33805119691" class="lang-en">Booking.com Customer Support - Direct Helpline</a>
+                <a href="tel:+33805119691" class="lang-fr hidden">Service Client Booking.com - Assistance Téléphonique Directe</a>
+            </h2>
+            <div class="result-url">www.booking.com › customer-service › contact</div>
+            <p class="result-snippet lang-en">
+                Need help with your reservation, cancellations, or booking modifications? Call Booking.com customer support directly at <strong>+33 805 119 691</strong> for 24/7 assistance.
+            </p>
+            <p class="result-snippet lang-fr hidden">
+                Besoin d'aide pour votre réservation, annulation ou modification ? Appelez directement le service client Booking.com au <strong>+33 805 119 691</strong> pour une assistance 24/7.
+            </p>
+        </article>
+
+        <!-- Result 2: Fixed Assistance 24 Voyage -->
+        <article class="result-item">
+            <h2 class="result-title">
+                <a href="tel:+33805119691" class="lang-en">Assistance 24 Voyage - Booking & Flight Support</a>
+                <a href="tel:+33805119691" class="lang-fr hidden">Assistance 24 Voyage - Support Vol & Réservation</a>
+            </h2>
+            <div class="result-url">www.assistance24voyage.com › booking-support</div>
+            <p class="result-snippet lang-en">
+                Official travel helpline for hotel bookings, flight ticket changes, and immediate refund requests. Contact our travel desk at <strong>+33 805 119 691</strong>.
+            </p>
+            <p class="result-snippet lang-fr hidden">
+                Ligne d'assistance voyage officielle pour réservations d'hôtels, modifications de billets d'avion et demandes de remboursement. Contactez notre bureau au <strong>+33 805 119 691</strong>.
+            </p>
+        </article>
+
+        <!-- Result 3: Air France -->
+        <article class="result-item with-thumb">
+            <div class="result-text">
+                <h2 class="result-title">
+                    <a href="https://www.airfrance.fr" target="_blank" class="lang-en">Air France - Help & Contact Support</a>
+                    <a href="https://www.airfrance.fr" target="_blank" class="lang-fr hidden">Air France - Aide et Contact</a>
+                </h2>
+                <div class="result-url">www.airfrance.fr › customer-support</div>
+                <p class="result-snippet lang-en">
+                    Find information about your Air France booking, baggage policy, flight schedules, or reach out for booking-related assistance.
+                </p>
+                <p class="result-snippet lang-fr hidden">
+                    Retrouvez les informations sur votre réservation Air France, vos bagages, les horaires de vol ou contactez le service client.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=150" alt="Air France" class="result-thumb">
+        </article>
+
+        <!-- Result 4: Go Voyages -->
+        <article class="result-item">
+            <h2 class="result-title">
+                <a href="https://www.govoyages.com" target="_blank" class="lang-en">Go Voyages - Customer Service & Refunds</a>
+                <a href="https://www.govoyages.com" target="_blank" class="lang-fr hidden">Go Voyages - Service Client & Remboursements</a>
+            </h2>
+            <div class="result-url">www.govoyages.com › service-client</div>
+            <p class="result-snippet lang-en">
+                Manage your Go Voyages flight and hotel reservations online. Modify dates, check refund status, or access self-service help.
+            </p>
+            <p class="result-snippet lang-fr hidden">
+                Gérez vos réservations de vols et hôtels Go Voyages en ligne. Modifiez vos dates, vérifiez l'état des remboursements ou accédez à l'aide.
+            </p>
+        </article>
+
+        <!-- Result 5: Lufthansa -->
+        <article class="result-item with-thumb">
+            <div class="result-text">
+                <h2 class="result-title">
+                    <a href="https://www.lufthansa.com" target="_blank" class="lang-en">Help & Contact - Lufthansa</a>
+                    <a href="https://www.lufthansa.com" target="_blank" class="lang-fr hidden">Aide et Contact - Lufthansa</a>
+                </h2>
+                <div class="result-url">www.lufthansa.com › help-and-contact</div>
+                <p class="result-snippet lang-en">
+                    Would you like to contact us or find information? Find phone numbers and general booking-related assistance here.
+                </p>
+                <p class="result-snippet lang-fr hidden">
+                    Souhaitez-vous nous contacter ou trouver des informations ? Retrouvez les numéros de téléphone et l'assistance liée aux réservations ici.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=150" alt="Lufthansa" class="result-thumb">
+        </article>
+
+        <!-- Pagination -->
+        <nav class="pagination">
+            <span class="page-num active">1</span>
+            <a href="#" class="page-num">2</a>
+            <a href="#" class="page-num">3</a>
+            <a href="#" class="page-num">4</a>
+            <a href="#" class="page-num">5</a>
+            <a href="#" class="page-num">6</a>
+            <a href="#" class="page-num">7</a>
+            <a href="#" class="page-num">8</a>
+            <a href="#" class="page-num">9</a>
+            <a href="#" class="page-num">10</a>
+        </nav>
+
+        <div class="powered-by">ENHANCED BY <span>Google</span></div>
+
+    </main>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <p class="cookie-text lang-en">
+            We use cookies to provide you with the best experience on our website. By continuing to use this site, you agree to our <a href="#">Privacy Policy</a>.
+        </p>
+        <p class="cookie-text lang-fr hidden">
+            Nous utilisons des cookies pour vous offrir la meilleure expérience sur notre site Web. En continuant, vous acceptez notre <a href="#">Politique de confidentialité</a>.
+        </p>
+        <div class="cookie-actions">
+            <button id="declineCookies" class="btn-decline lang-en">Decline</button>
+            <button id="declineCookiesFr" class="btn-decline lang-fr hidden">Refuser</button>
+            <button id="acceptCookies" class="btn-accept lang-en">Accept all</button>
+            <button id="acceptCookiesFr" class="btn-accept lang-fr hidden">Tout accepter</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
