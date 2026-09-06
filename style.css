@@ -18,17 +18,21 @@ body {
     display: none !important;
 }
 
-/* Header */
+/* Header - Centered Layout */
 .serp-header {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 14px 24px;
     border-bottom: 1px solid #e0e0e0;
+    width: 100%;
 }
 
 .header-left {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 680px;
 }
 
 .search-input-box {
@@ -38,7 +42,7 @@ body {
     border: 1px solid #dfe1e5;
     border-radius: 24px;
     padding: 6px 16px;
-    width: 520px;
+    width: 100%;
     box-shadow: 0 1px 6px rgba(32, 33, 36, 0.1);
 }
 
@@ -93,12 +97,13 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* Container Principal */
+/* Container Principal - Fully Centered */
 .results-container {
     max-width: 680px;
-    margin: 20px 0 40px 140px;
+    margin: 20px auto 40px auto;
     padding: 0 15px;
     flex: 1;
+    width: 100%;
 }
 
 /* Featured Card */
@@ -260,9 +265,10 @@ body {
     color: #3c4043;
 }
 
-/* Pagination */
+/* Pagination - Centered */
 .pagination {
     display: flex;
+    justify-content: center;
     gap: 8px;
     margin-top: 30px;
     margin-bottom: 15px;
