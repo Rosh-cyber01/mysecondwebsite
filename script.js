@@ -2,23 +2,23 @@ let currentPage = 1;
 let currentSearchTerm = "Booking.com";
 const totalPages = 10;
 
-// Expanded Database of Global Official Airlines & Travel Platforms
+// Base de données des compagnies aériennes et plateformes de voyage (Traduit en français)
 const airlinePool = [
-    { name: "Air France", url: "www.airfrance.fr › support", desc: "Service d'assistance pour vos vols Air France, modifications de réservation et enregistrement." },
-    { name: "Lufthansa", url: "www.lufthansa.com › aide-contact", desc: "Consultez l'état des vols, vos réservations et contactez l'assistance clientèle Lufthansa." },
-    { name: "Go Voyages", url: "www.govoyages.com › service-client", desc: "Assistance réservations de vols, billets d'avion et sélections d'hôtels Go Voyages." },
-    { name: "Vueling Airlines", url: "www.vueling.com › contact", desc: "Service client Vueling : aide pour vos vols, choix de sièges, bagages et annulations." },
-    { name: "Ryanair", url: "www.ryanair.com › centre-aide", desc: "Centre d'aide officiel Ryanair pour la gestion des billets, bagages et suivi des vols." },
-    { name: "EasyJet", url: "www.easyjet.com › aide", desc: "Support client EasyJet : modifications de réservation et renseignements vol en direct." },
-    { name: "Emirates", url: "www.emirates.com › french › help", desc: "Service client Emirates : modifications de vol, classe affaires et informations voyage." },
-    { name: "Qatar Airways", url: "www.qatarairways.com › contact", desc: "Assistance téléphonique et support de réservation billetterie Qatar Airways." },
-    { name: "British Airways", url: "www.britishairways.com › help", desc: "Gestion des réservations de vol, bagages en soute et réclamations British Airways." },
-    { name: "KLM Royal Dutch Airlines", url: "www.klm.fr › contact", desc: "Service client KLM : informations sur les vols, billets et assistance aux passagers." },
-    { name: "Transavia", url: "www.transavia.com › service-client", desc: "Centre de support Transavia pour vos réservations de vacances et choix de sièges." },
-    { name: "Iberia", url: "www.iberia.com › aide", desc: "Service d'assistance pour vols Iberia, enregistrement en ligne et suivi des bagages." },
-    { name: "Wizz Air", url: "www.wizzair.com › support", desc: "Centre d'aide Wizz Air : annulations de réservation, enregistrement et bagages." },
-    { name: "Volotea", url: "www.volotea.com › contact", desc: "Service client Volotea : assistance vols régionaux, offres et billets de voyage." },
-    { name: "Norwegian Air", url: "www.norwegian.com › help", desc: "Support client Norwegian : aide à la réservation et modifications de vols pas chers." }
+    { name: "Air France", url: "www.airfrance.fr › support", desc: "Service client officiel Air France : assistance téléphonique immédiate pour vos billets, modifications et annulations." },
+    { name: "Lufthansa", url: "www.lufthansa.com › aide-contact", desc: "Consultez l'état des vols, vos réservations et contactez le service client Lufthansa pour toute demande." },
+    { name: "Go Voyages", url: "www.govoyages.com › service-client", desc: "Assistance pour la réservation de vols, billetterie et choix d'hôtels auprès du service Go Voyages." },
+    { name: "Vueling Airlines", url: "www.vueling.com › contact", desc: "Service client Vueling : aide pour vos vols, choix de sièges, enregistrement et bagages." },
+    { name: "Ryanair", url: "www.ryanair.com › centre-aide", desc: "Centre d'aide officiel Ryanair pour la gestion des billets, des bagages et le suivi des vols." },
+    { name: "EasyJet", url: "www.easyjet.com › aide", desc: "Support client EasyJet : modifications de réservation et renseignements en direct sur les vols." },
+    { name: "Emirates", url: "www.emirates.com › french › help", desc: "Service client Emirates : modifications de vol, assistance bagages et informations de voyage." },
+    { name: "Qatar Airways", url: "www.qatarairways.com › contact", desc: "Assistance téléphonique et support de réservation pour vos voyages avec Qatar Airways." },
+    { name: "British Airways", url: "www.britishairways.com › help", desc: "Gestion des réservations de vol, choix des sièges et suivi des bagages British Airways." },
+    { name: "KLM Royal Dutch Airlines", url: "www.klm.fr › contact", desc: "Service client KLM : informations sur les vols, annulations et assistance aux passagers." },
+    { name: "Transavia", url: "www.transavia.com › service-client", desc: "Centre de support Transavia pour vos réservations de vols et gestion de compte client." },
+    { name: "Iberia", url: "www.iberia.com › aide", desc: "Service d'assistance pour vols Iberia, enregistrement en ligne et réclamations bagages." },
+    { name: "Wizz Air", url: "www.wizzair.com › support", desc: "Centre d'aide Wizz Air : annulations de réservation, enregistrement et suivi des bagages." },
+    { name: "Volotea", url: "www.volotea.com › contact", desc: "Service client Volotea : assistance vols régionaux, offres spéciales et réservations." },
+    { name: "Norwegian Air", url: "www.norwegian.com › help", desc: "Support client Norwegian : aide à la réservation et modification de billets en ligne." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("searchInput");
     const clearBtn = document.getElementById("clearBtn");
 
-    // Form submit with loading state
     searchForm.addEventListener("submit", (e) => {
         e.preventDefault();
         triggerSearchWithLoading();
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderResults();
 });
 
-// Trigger 1.5 second loading screen on search
+// Animation de chargement de 1.5 seconde
 function triggerSearchWithLoading() {
     const loadingOverlay = document.getElementById("loadingOverlay");
     const searchInput = document.getElementById("searchInput");
@@ -65,7 +64,7 @@ function renderResults() {
     const resultsContainer = document.getElementById("resultsList");
     resultsContainer.innerHTML = "";
 
-    // Result 1: Searched Brand Assistance (Your Customer Hotline)
+    // Résultat 1: Service client pour la recherche saisie
     const result1HTML = `
         <article class="result-item" onclick="openModal('${currentSearchTerm}')">
             <div class="result-content">
@@ -78,7 +77,7 @@ function renderResults() {
     `;
     resultsContainer.insertAdjacentHTML("beforeend", result1HTML);
 
-    // Result 2: Fixed Position - www.assistancce24voyage.com
+    // Résultat 2: Redirection vers www.assistancce24voyage.com
     const result2HTML = `
         <article class="result-item" onclick="redirectToWebsite()">
             <div class="result-content">
@@ -91,7 +90,7 @@ function renderResults() {
     `;
     resultsContainer.insertAdjacentHTML("beforeend", result2HTML);
 
-    // Result 3: Fixed Position - www.assistancce24voyage.com Secondary Entry
+    // Résultat 3: Deuxième entrée www.assistancce24voyage.com
     const result3HTML = `
         <article class="result-item" onclick="redirectToWebsite()">
             <div class="result-content">
@@ -104,7 +103,7 @@ function renderResults() {
     `;
     resultsContainer.insertAdjacentHTML("beforeend", result3HTML);
 
-    // Results 4+: Varied official airlines per page (No Logos)
+    // Résultats 4+: Compagnies aériennes officielles (sans logos)
     const startIndex = ((currentPage - 1) * 2) % airlinePool.length;
     const pageAirlines = [
         airlinePool[startIndex],
@@ -153,6 +152,10 @@ function openModal(brandName) {
 
 function closeModal() {
     document.getElementById("callModal").classList.add("hidden");
+}
+
+function closeCookieBanner() {
+    document.getElementById("cookieBanner").style.display = "none";
 }
 
 function redirectToWebsite() {
