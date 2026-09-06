@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search - Booking.com Contact</title>
+    <title>Search Assistance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Search Header -->
+    <!-- Top Header & Search Bar -->
     <header class="serp-header">
         <div class="header-left">
             <div class="search-logo">S<span>earch</span></div>
             <div class="search-input-box">
-                <input type="text" id="searchInput" value="contact booking.com">
-                <button class="clear-btn">&times;</button>
+                <input type="text" id="searchInput" value="Booking.com" placeholder="Search service...">
+                <button class="clear-btn" id="clearBtn">&times;</button>
                 <div class="v-divider"></div>
                 <button class="mic-btn">🎤</button>
             </div>
@@ -25,121 +25,147 @@
         </div>
     </header>
 
-    <!-- Main Search Results Container -->
+    <!-- Main Content Area -->
     <main class="results-container">
 
-        <!-- Result 1: Primary Booking.com Customer Support -->
-        <article class="result-item">
-            <h2 class="result-title">
-                <a href="tel:+33805119691" class="lang-en">Booking.com Customer Support - Direct Helpline</a>
-                <a href="tel:+33805119691" class="lang-fr hidden">Service Client Booking.com - Assistance Téléphonique Directe</a>
-            </h2>
-            <div class="result-url">www.booking.com › customer-service › contact</div>
-            <p class="result-snippet lang-en">
-                Need help with your reservation, cancellations, or booking modifications? Call Booking.com customer support directly at <strong>+33 805 119 691</strong> for 24/7 assistance.
-            </p>
-            <p class="result-snippet lang-fr hidden">
-                Besoin d'aide pour votre réservation, annulation ou modification ? Appelez directement le service client Booking.com au <strong>+33 805 119 691</strong> pour une assistance 24/7.
-            </p>
-        </article>
-
-        <!-- Result 2: Fixed Assistance 24 Voyage -->
-        <article class="result-item">
-            <h2 class="result-title">
-                <a href="tel:+33805119691" class="lang-en">Assistance 24 Voyage - Booking & Flight Support</a>
-                <a href="tel:+33805119691" class="lang-fr hidden">Assistance 24 Voyage - Support Vol & Réservation</a>
-            </h2>
-            <div class="result-url">www.assistance24voyage.com › booking-support</div>
-            <p class="result-snippet lang-en">
-                Official travel helpline for hotel bookings, flight ticket changes, and immediate refund requests. Contact our travel desk at <strong>+33 805 119 691</strong>.
-            </p>
-            <p class="result-snippet lang-fr hidden">
-                Ligne d'assistance voyage officielle pour réservations d'hôtels, modifications de billets d'avion et demandes de remboursement. Contactez notre bureau au <strong>+33 805 119 691</strong>.
-            </p>
-        </article>
-
-        <!-- Result 3: Air France -->
-        <article class="result-item with-thumb">
-            <div class="result-text">
-                <h2 class="result-title">
-                    <a href="https://www.airfrance.fr" target="_blank" class="lang-en">Air France - Help & Contact Support</a>
-                    <a href="https://www.airfrance.fr" target="_blank" class="lang-fr hidden">Air France - Aide et Contact</a>
-                </h2>
-                <div class="result-url">www.airfrance.fr › customer-support</div>
-                <p class="result-snippet lang-en">
-                    Find information about your Air France booking, baggage policy, flight schedules, or reach out for booking-related assistance.
-                </p>
-                <p class="result-snippet lang-fr hidden">
-                    Retrouvez les informations sur votre réservation Air France, vos bagages, les horaires de vol ou contactez le service client.
-                </p>
+        <!-- Featured Result (Big Call Box) -->
+        <div class="featured-card">
+            <div class="featured-label lang-en">FEATURED RESULT</div>
+            <div class="featured-label lang-fr hidden">RÉSULTAT EN VEDETTE</div>
+            
+            <div class="featured-header">
+                <div class="brand-avatar" id="avatarLetter">B</div>
+                <div>
+                    <div class="brand-title-box">
+                        <h3 id="featuredTitle">Booking.com</h3>
+                        <span class="official-badge lang-en">✓ Official Support</span>
+                        <span class="official-badge lang-fr hidden">✓ Support Officiel</span>
+                    </div>
+                    <div class="rating-row">
+                        <span class="rating-score">4.8</span>
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(87,261 reviews)</span>
+                    </div>
+                </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=150" alt="Air France" class="result-thumb">
-        </article>
 
-        <!-- Result 4: Go Voyages -->
-        <article class="result-item">
-            <h2 class="result-title">
-                <a href="https://www.govoyages.com" target="_blank" class="lang-en">Go Voyages - Customer Service & Refunds</a>
-                <a href="https://www.govoyages.com" target="_blank" class="lang-fr hidden">Go Voyages - Service Client & Remboursements</a>
-            </h2>
-            <div class="result-url">www.govoyages.com › service-client</div>
-            <p class="result-snippet lang-en">
-                Manage your Go Voyages flight and hotel reservations online. Modify dates, check refund status, or access self-service help.
+            <p class="featured-desc lang-en">
+                Reach customer support directly. Instant phone assistance for booking changes, cancellations, billing, and flight inquiries.
             </p>
-            <p class="result-snippet lang-fr hidden">
-                Gérez vos réservations de vols et hôtels Go Voyages en ligne. Modifiez vos dates, vérifiez l'état des remboursements ou accédez à l'aide.
+            <p class="featured-desc lang-fr hidden">
+                Contactez le service client directement. Assistance téléphonique immédiate pour modifications, annulations et facturation.
             </p>
-        </article>
 
-        <!-- Result 5: Lufthansa -->
-        <article class="result-item with-thumb">
-            <div class="result-text">
-                <h2 class="result-title">
-                    <a href="https://www.lufthansa.com" target="_blank" class="lang-en">Help & Contact - Lufthansa</a>
-                    <a href="https://www.lufthansa.com" target="_blank" class="lang-fr hidden">Aide et Contact - Lufthansa</a>
-                </h2>
-                <div class="result-url">www.lufthansa.com › help-and-contact</div>
-                <p class="result-snippet lang-en">
-                    Would you like to contact us or find information? Find phone numbers and general booking-related assistance here.
-                </p>
-                <p class="result-snippet lang-fr hidden">
-                    Souhaitez-vous nous contacter ou trouver des informations ? Retrouvez les numéros de téléphone et l'assistance liée aux réservations ici.
-                </p>
+            <div class="phone-display">
+                <span class="phone-icon">📞</span>
+                <a href="tel:+33805119691" class="phone-number">+33 805 119 691</a>
             </div>
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=150" alt="Lufthansa" class="result-thumb">
-        </article>
 
-        <!-- Pagination -->
+            <div class="featured-action-row">
+                <span class="status-tag lang-en">🕒 Open 24 Hours</span>
+                <span class="status-tag lang-fr hidden">🕒 Ouvert 24/7</span>
+                <a href="tel:+33805119691" class="btn-call-now lang-en">📞 Call Now – Toll Free</a>
+                <a href="tel:+33805119691" class="btn-call-now lang-fr hidden">📞 Appeler Maintenant – Gratuit</a>
+            </div>
+        </div>
+
+        <!-- Dynamic Results List -->
+        <div id="resultsList">
+            
+            <!-- Result 1 -->
+            <article class="result-item" onclick="openModal('Booking.com Customer Service')">
+                <h2 class="result-title">
+                    <a href="javascript:void(0)"><span class="dynamic-query">Booking.com</span> | <span class="lang-en">Official Customer Support - Call Direct</span><span class="lang-fr hidden">Service Client Officiel - Appel Direct</span></a>
+                </h2>
+                <div class="ad-tag-url"><span class="ad-badge">Ad</span> www.booking.com › contact</div>
+                <p class="result-snippet lang-en">Looking for help with <span class="dynamic-query">Booking.com</span>? Our team assists immediately. Call toll-free: <strong>+33 805 119 691</strong>.</p>
+                <p class="result-snippet lang-fr hidden">Besoin d'aide avec <span class="dynamic-query">Booking.com</span> ? Notre équipe vous aide immédiatement. Appelez : <strong>+33 805 119 691</strong>.</p>
+                <button class="visit-btn lang-en">▶ Visit Helpline</button>
+                <button class="visit-btn lang-fr hidden">▶ Consulter</button>
+            </article>
+
+            <!-- Result 2: Fixed assistance24voyage -->
+            <article class="result-item" onclick="openModal('Assistance 24 Voyage')">
+                <h2 class="result-title">
+                    <a href="javascript:void(0)">Assistance 24 Voyage | <span class="lang-en">24/7 Hotline Support</span><span class="lang-fr hidden">Assistance Voyage 24h/7j</span></a>
+                </h2>
+                <div class="ad-tag-url"><span class="ad-badge">Ad</span> www.assistance24voyage.com › support</div>
+                <p class="result-snippet lang-en">Direct helpline for ticket changes, flight status, hotel modifications, and instant cancellations: <strong>+33 805 119 691</strong>.</p>
+                <p class="result-snippet lang-fr hidden">Ligne directe pour modifications de billets, vols, hôtels et annulations immédiates : <strong>+33 805 119 691</strong>.</p>
+                <button class="visit-btn lang-en">▶ Visit Website</button>
+                <button class="visit-btn lang-fr hidden">▶ Consulter</button>
+            </article>
+
+            <!-- Result 3: Air France -->
+            <article class="result-item with-thumb" onclick="openModal('Air France Support')">
+                <div class="result-text">
+                    <h2 class="result-title"><a href="javascript:void(0)">Air France - Flight & Booking Assistance</a></h2>
+                    <div class="result-url">www.airfrance.fr › support</div>
+                    <p class="result-snippet lang-en">Check flight status, luggage policies, or contact support for modifications.</p>
+                    <p class="result-snippet lang-fr hidden">Consultez l'état des vols, la politique de bagages ou contactez l'assistance.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=120" alt="Air France" class="result-thumb">
+            </article>
+
+            <!-- Result 4: Go Voyages -->
+            <article class="result-item" onclick="openModal('Go Voyages Helpdesk')">
+                <h2 class="result-title"><a href="javascript:void(0)">Go Voyages - Customer Service Desk</a></h2>
+                <div class="result-url">www.govoyages.com › service-client</div>
+                <p class="result-snippet lang-en">Modify trip dates, manage flight bookings, or speak to travel agents.</p>
+                <p class="result-snippet lang-fr hidden">Modifiez vos dates de voyage, gérez vos vols ou parlez à un conseiller.</p>
+            </article>
+
+        </div>
+
+        <!-- Pagination Bar -->
         <nav class="pagination">
-            <span class="page-num active">1</span>
-            <a href="#" class="page-num">2</a>
-            <a href="#" class="page-num">3</a>
-            <a href="#" class="page-num">4</a>
-            <a href="#" class="page-num">5</a>
-            <a href="#" class="page-num">6</a>
-            <a href="#" class="page-num">7</a>
-            <a href="#" class="page-num">8</a>
-            <a href="#" class="page-num">9</a>
-            <a href="#" class="page-num">10</a>
+            <span class="page-num active" onclick="changePage(1, this)">1</span>
+            <span class="page-num" onclick="changePage(2, this)">2</span>
+            <span class="page-num" onclick="changePage(3, this)">3</span>
+            <span class="page-num" onclick="changePage(4, this)">4</span>
+            <span class="page-num" onclick="changePage(5, this)">5</span>
         </nav>
 
         <div class="powered-by">ENHANCED BY <span>Google</span></div>
 
     </main>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookieBanner" class="cookie-banner">
-        <p class="cookie-text lang-en">
-            We use cookies to provide you with the best experience on our website. By continuing to use this site, you agree to our <a href="#">Privacy Policy</a>.
-        </p>
-        <p class="cookie-text lang-fr hidden">
-            Nous utilisons des cookies pour vous offrir la meilleure expérience sur notre site Web. En continuant, vous acceptez notre <a href="#">Politique de confidentialité</a>.
-        </p>
-        <div class="cookie-actions">
-            <button id="declineCookies" class="btn-decline lang-en">Decline</button>
-            <button id="declineCookiesFr" class="btn-decline lang-fr hidden">Refuser</button>
-            <button id="acceptCookies" class="btn-accept lang-en">Accept all</button>
-            <button id="acceptCookiesFr" class="btn-accept lang-fr hidden">Tout accepter</button>
+    <!-- Verification Call Popup Modal -->
+    <div id="callModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            
+            <div class="verified-header">
+                <span class="check-icon">🛡️</span>
+                <span class="verified-text lang-en">Verified Business Partner</span>
+                <span class="verified-text lang-fr hidden">Entreprise Vérifiée</span>
+            </div>
+
+            <div class="modal-icon-wrapper">
+                <div class="phone-bubble">📞</div>
+            </div>
+
+            <h3 id="modalBrandName">Booking.com Support</h3>
+            
+            <p class="modal-subtext lang-en">You are about to connect directly via sponsored helpline.</p>
+            <p class="modal-subtext lang-fr hidden">Vous allez être mis en relation directe via le service sponsorisé.</p>
+
+            <div class="modal-phone-box">
+                <div class="phone-label lang-en">DIRECT LINE</div>
+                <div class="phone-label lang-fr hidden">LIGNE DIRECTE</div>
+                <div class="modal-phone-number">+33 805 119 691</div>
+            </div>
+
+            <a href="tel:+33805119691" class="btn-modal-call lang-en">📞 Call Now</a>
+            <a href="tel:+33805119691" class="btn-modal-call lang-fr hidden">📞 Appeler Maintenant</a>
+
+            <div class="modal-footer-btns">
+                <button class="btn-modal-copy lang-en" onclick="copyNumber()">📋 Copy Number</button>
+                <button class="btn-modal-copy lang-fr hidden" onclick="copyNumber()">📋 Copier le numéro</button>
+
+                <a href="tel:+33805119691" class="btn-modal-visit lang-en">🌐 Visit Website</a>
+                <a href="tel:+33805119691" class="btn-modal-visit lang-fr hidden">🌐 Visiter le site</a>
+            </div>
         </div>
     </div>
 
