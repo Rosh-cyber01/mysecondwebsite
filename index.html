@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moteur de Recherche - Support Voyage</title>
+    <title>Moteur de Recherche - Assistance Voyage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header avec Barre de Recherche -->
+    <!-- Header sans logo ni badge FR -->
     <header class="serp-header">
         <div class="header-left">
-            <div class="search-logo">S<span>earch</span></div>
             <form id="searchForm" class="search-input-box">
                 <input type="text" id="searchInput" value="Booking.com" placeholder="Rechercher une compagnie ou réservation...">
                 <button type="button" class="clear-btn" id="clearBtn">&times;</button>
@@ -19,15 +18,17 @@
                 <button type="submit" class="search-btn">🔍</button>
             </form>
         </div>
-        <div class="header-right">
-            <span class="lang-badge">FR</span>
-        </div>
     </header>
+
+    <!-- Overlay de Chargement (1-2 sec) -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+    </div>
 
     <!-- Zone Principale -->
     <main class="results-container">
 
-        <!-- Encrocartouche Résultat En Vedette -->
+        <!-- Encadré Résultat En Vedette -->
         <div class="featured-card">
             <div class="featured-label">RÉSULTAT EN VEDETTE</div>
             
@@ -67,15 +68,28 @@
         </div>
 
         <!-- Pagination -->
-        <nav class="pagination">
-            <span class="page-num active" onclick="changePage(1, this)">1</span>
-            <span class="page-num" onclick="changePage(2, this)">2</span>
-            <span class="page-num" onclick="changePage(3, this)">3</span>
+        <nav class="pagination" id="paginationBar">
+            <!-- Généré dynamiquement par JS -->
         </nav>
 
-        <div class="powered-by">OPTIMISÉ PAR <span>Google</span></div>
+        <div class="powered-by">ENHANCED BY <span>Google</span></div>
 
     </main>
+
+    <!-- Footer Personnalisé (Bas de page) -->
+    <footer class="serp-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span>© 2026 ShowSearch Inc.</span>
+                <a href="#">Über uns</a>
+            </div>
+            <div class="footer-right">
+                <a href="#">Datenschutz</a>
+                <a href="#">Nutzungsbedingungen</a>
+                <a href="#">Impressum</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Fenêtre Pop-up d'Assistance -->
     <div id="callModal" class="modal-overlay hidden">
