@@ -1,59 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Assistance</title>
+    <title>Moteur de Recherche - Support Voyage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Header & Search Bar -->
+    <!-- Header avec Barre de Recherche -->
     <header class="serp-header">
         <div class="header-left">
             <div class="search-logo">S<span>earch</span></div>
-            <div class="search-input-box">
-                <input type="text" id="searchInput" value="Booking.com" placeholder="Search service...">
-                <button class="clear-btn" id="clearBtn">&times;</button>
+            <form id="searchForm" class="search-input-box">
+                <input type="text" id="searchInput" value="Booking.com" placeholder="Rechercher une compagnie ou réservation...">
+                <button type="button" class="clear-btn" id="clearBtn">&times;</button>
                 <div class="v-divider"></div>
-                <button class="mic-btn">🎤</button>
-            </div>
+                <button type="submit" class="search-btn">🔍</button>
+            </form>
         </div>
-        <div class="lang-switch">
-            <button id="langEnBtn" class="lang-btn active">EN</button>
-            <button id="langFrBtn" class="lang-btn">FR</button>
+        <div class="header-right">
+            <span class="lang-badge">FR</span>
         </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Zone Principale -->
     <main class="results-container">
 
-        <!-- Featured Result (Big Call Box) -->
+        <!-- Encrocartouche Résultat En Vedette -->
         <div class="featured-card">
-            <div class="featured-label lang-en">FEATURED RESULT</div>
-            <div class="featured-label lang-fr hidden">RÉSULTAT EN VEDETTE</div>
+            <div class="featured-label">RÉSULTAT EN VEDETTE</div>
             
             <div class="featured-header">
                 <div class="brand-avatar" id="avatarLetter">B</div>
                 <div>
                     <div class="brand-title-box">
                         <h3 id="featuredTitle">Booking.com</h3>
-                        <span class="official-badge lang-en">✓ Official Support</span>
-                        <span class="official-badge lang-fr hidden">✓ Support Officiel</span>
+                        <span class="official-badge">✓ Support Officiel</span>
                     </div>
                     <div class="rating-row">
                         <span class="rating-score">4.8</span>
                         <span class="stars">★★★★★</span>
-                        <span class="rating-count">(87,261 reviews)</span>
+                        <span class="rating-count">(87 261 avis)</span>
                     </div>
                 </div>
             </div>
 
-            <p class="featured-desc lang-en">
-                Reach customer support directly. Instant phone assistance for booking changes, cancellations, billing, and flight inquiries.
-            </p>
-            <p class="featured-desc lang-fr hidden">
-                Contactez le service client directement. Assistance téléphonique immédiate pour modifications, annulations et facturation.
+            <p class="featured-desc">
+                Service client direct. Assistance téléphonique immédiate 24/7 pour modifications de réservation, annulations, facturation et suivi de vol.
             </p>
 
             <div class="phone-display">
@@ -62,109 +56,54 @@
             </div>
 
             <div class="featured-action-row">
-                <span class="status-tag lang-en">🕒 Open 24 Hours</span>
-                <span class="status-tag lang-fr hidden">🕒 Ouvert 24/7</span>
-                <a href="tel:+33805119691" class="btn-call-now lang-en">📞 Call Now – Toll Free</a>
-                <a href="tel:+33805119691" class="btn-call-now lang-fr hidden">📞 Appeler Maintenant – Gratuit</a>
+                <span class="status-tag">🕒 Ouvert 24h/24 et 7j/7</span>
+                <a href="tel:+33805119691" class="btn-call-now">📞 Appeler Maintenant – Gratuit</a>
             </div>
         </div>
 
-        <!-- Dynamic Results List -->
+        <!-- Liste des Résultats Dynamiques -->
         <div id="resultsList">
-            
-            <!-- Result 1 -->
-            <article class="result-item" onclick="openModal('Booking.com Customer Service')">
-                <h2 class="result-title">
-                    <a href="javascript:void(0)"><span class="dynamic-query">Booking.com</span> | <span class="lang-en">Official Customer Support - Call Direct</span><span class="lang-fr hidden">Service Client Officiel - Appel Direct</span></a>
-                </h2>
-                <div class="ad-tag-url"><span class="ad-badge">Ad</span> www.booking.com › contact</div>
-                <p class="result-snippet lang-en">Looking for help with <span class="dynamic-query">Booking.com</span>? Our team assists immediately. Call toll-free: <strong>+33 805 119 691</strong>.</p>
-                <p class="result-snippet lang-fr hidden">Besoin d'aide avec <span class="dynamic-query">Booking.com</span> ? Notre équipe vous aide immédiatement. Appelez : <strong>+33 805 119 691</strong>.</p>
-                <button class="visit-btn lang-en">▶ Visit Helpline</button>
-                <button class="visit-btn lang-fr hidden">▶ Consulter</button>
-            </article>
-
-            <!-- Result 2: Fixed assistance24voyage -->
-            <article class="result-item" onclick="openModal('Assistance 24 Voyage')">
-                <h2 class="result-title">
-                    <a href="javascript:void(0)">Assistance 24 Voyage | <span class="lang-en">24/7 Hotline Support</span><span class="lang-fr hidden">Assistance Voyage 24h/7j</span></a>
-                </h2>
-                <div class="ad-tag-url"><span class="ad-badge">Ad</span> www.assistance24voyage.com › support</div>
-                <p class="result-snippet lang-en">Direct helpline for ticket changes, flight status, hotel modifications, and instant cancellations: <strong>+33 805 119 691</strong>.</p>
-                <p class="result-snippet lang-fr hidden">Ligne directe pour modifications de billets, vols, hôtels et annulations immédiates : <strong>+33 805 119 691</strong>.</p>
-                <button class="visit-btn lang-en">▶ Visit Website</button>
-                <button class="visit-btn lang-fr hidden">▶ Consulter</button>
-            </article>
-
-            <!-- Result 3: Air France -->
-            <article class="result-item with-thumb" onclick="openModal('Air France Support')">
-                <div class="result-text">
-                    <h2 class="result-title"><a href="javascript:void(0)">Air France - Flight & Booking Assistance</a></h2>
-                    <div class="result-url">www.airfrance.fr › support</div>
-                    <p class="result-snippet lang-en">Check flight status, luggage policies, or contact support for modifications.</p>
-                    <p class="result-snippet lang-fr hidden">Consultez l'état des vols, la politique de bagages ou contactez l'assistance.</p>
-                </div>
-                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=120" alt="Air France" class="result-thumb">
-            </article>
-
-            <!-- Result 4: Go Voyages -->
-            <article class="result-item" onclick="openModal('Go Voyages Helpdesk')">
-                <h2 class="result-title"><a href="javascript:void(0)">Go Voyages - Customer Service Desk</a></h2>
-                <div class="result-url">www.govoyages.com › service-client</div>
-                <p class="result-snippet lang-en">Modify trip dates, manage flight bookings, or speak to travel agents.</p>
-                <p class="result-snippet lang-fr hidden">Modifiez vos dates de voyage, gérez vos vols ou parlez à un conseiller.</p>
-            </article>
-
+            <!-- Injecté dynamiquement par JS -->
         </div>
 
-        <!-- Pagination Bar -->
+        <!-- Pagination -->
         <nav class="pagination">
             <span class="page-num active" onclick="changePage(1, this)">1</span>
             <span class="page-num" onclick="changePage(2, this)">2</span>
             <span class="page-num" onclick="changePage(3, this)">3</span>
-            <span class="page-num" onclick="changePage(4, this)">4</span>
-            <span class="page-num" onclick="changePage(5, this)">5</span>
         </nav>
 
-        <div class="powered-by">ENHANCED BY <span>Google</span></div>
+        <div class="powered-by">OPTIMISÉ PAR <span>Google</span></div>
 
     </main>
 
-    <!-- Verification Call Popup Modal -->
+    <!-- Fenêtre Pop-up d'Assistance -->
     <div id="callModal" class="modal-overlay hidden">
         <div class="modal-card">
             <button class="modal-close" onclick="closeModal()">&times;</button>
             
             <div class="verified-header">
                 <span class="check-icon">🛡️</span>
-                <span class="verified-text lang-en">Verified Business Partner</span>
-                <span class="verified-text lang-fr hidden">Entreprise Vérifiée</span>
+                <span class="verified-text">Partenaire de Service Vérifié</span>
             </div>
 
             <div class="modal-icon-wrapper">
                 <div class="phone-bubble">📞</div>
             </div>
 
-            <h3 id="modalBrandName">Booking.com Support</h3>
-            
-            <p class="modal-subtext lang-en">You are about to connect directly via sponsored helpline.</p>
-            <p class="modal-subtext lang-fr hidden">Vous allez être mis en relation directe via le service sponsorisé.</p>
+            <h3 id="modalBrandName">Support Booking.com</h3>
+            <p class="modal-subtext">Vous allez être mis en relation téléphonique directe avec notre centrale d'assistance.</p>
 
             <div class="modal-phone-box">
-                <div class="phone-label lang-en">DIRECT LINE</div>
-                <div class="phone-label lang-fr hidden">LIGNE DIRECTE</div>
+                <div class="phone-label">LIGNE DIRECTE ASSISTANCE</div>
                 <div class="modal-phone-number">+33 805 119 691</div>
             </div>
 
-            <a href="tel:+33805119691" class="btn-modal-call lang-en">📞 Call Now</a>
-            <a href="tel:+33805119691" class="btn-modal-call lang-fr hidden">📞 Appeler Maintenant</a>
+            <a href="tel:+33805119691" class="btn-modal-call">📞 Appeler Directement</a>
 
             <div class="modal-footer-btns">
-                <button class="btn-modal-copy lang-en" onclick="copyNumber()">📋 Copy Number</button>
-                <button class="btn-modal-copy lang-fr hidden" onclick="copyNumber()">📋 Copier le numéro</button>
-
-                <a href="tel:+33805119691" class="btn-modal-visit lang-en">🌐 Visit Website</a>
-                <a href="tel:+33805119691" class="btn-modal-visit lang-fr hidden">🌐 Visiter le site</a>
+                <button class="btn-modal-copy" onclick="copyNumber()">📋 Copier le numéro</button>
+                <a href="https://www.assistance24voyage.com" target="_blank" class="btn-modal-visit">🌐 Accéder au site web</a>
             </div>
         </div>
     </div>
