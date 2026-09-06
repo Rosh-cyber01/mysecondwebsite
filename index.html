@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Header sans logo ni badge FR -->
+    <!-- Header avec Barre de Recherche -->
     <header class="serp-header">
         <div class="header-left">
             <form id="searchForm" class="search-input-box">
@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <!-- Overlay de Chargement (1-2 sec) -->
+    <!-- Overlay de Chargement (1.5 sec) -->
     <div id="loadingOverlay" class="loading-overlay hidden">
         <div class="spinner"></div>
     </div>
@@ -37,7 +37,7 @@
                 <div>
                     <div class="brand-title-box">
                         <h3 id="featuredTitle">Booking.com</h3>
-                        <span class="official-badge">✓ Support Officiel</span>
+                        <span class="official-badge">✓ Officiel</span>
                     </div>
                     <div class="rating-row">
                         <span class="rating-score">4.8</span>
@@ -57,8 +57,8 @@
             </div>
 
             <div class="featured-action-row">
-                <span class="status-tag">🕒 Ouvert 24h/24 et 7j/7</span>
-                <a href="tel:+33805119691" class="btn-call-now">📞 Appeler Maintenant – Gratuit</a>
+                <span class="status-tag">🕒 Ouvert 24 heures sur 24</span>
+                <a href="tel:+33805119691" class="btn-call-now">📞 Appeler maintenant – Gratuit</a>
             </div>
         </div>
 
@@ -72,24 +72,36 @@
             <!-- Généré dynamiquement par JS -->
         </nav>
 
-        <div class="powered-by">ENHANCED BY <span>Google</span></div>
+        <div class="powered-by">OPTIMISÉ PAR <span>Google</span></div>
 
     </main>
 
-    <!-- Footer Personnalisé (Bas de page) -->
+    <!-- Footer Traduit en Français -->
     <footer class="serp-footer">
         <div class="footer-container">
             <div class="footer-left">
                 <span>© 2026 ShowSearch Inc.</span>
-                <a href="#">Über uns</a>
+                <a href="#">À propos de nous</a>
             </div>
             <div class="footer-right">
-                <a href="#">Datenschutz</a>
-                <a href="#">Nutzungsbedingungen</a>
-                <a href="#">Impressum</a>
+                <a href="#">Protection des données</a>
+                <a href="#">Conditions d'utilisation</a>
+                <a href="#">Mentions légales</a>
             </div>
         </div>
     </footer>
+
+    <!-- Bandeau de Cookies en Bas de Page -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-text">
+            Nous utilisons des cookies afin de vous offrir la meilleure expérience possible sur notre site web. En poursuivant votre navigation, vous acceptez l'utilisation de cookies conformément à notre <a href="#">politique de confidentialité</a>.
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-cookie-reject" onclick="closeCookieBanner()">Refuser</button>
+            <button class="btn-cookie-accept" onclick="closeCookieBanner()">Tout accepter</button>
+            <button class="cookie-close-icon" onclick="closeCookieBanner()">&times;</button>
+        </div>
+    </div>
 
     <!-- Fenêtre Pop-up d'Assistance -->
     <div id="callModal" class="modal-overlay hidden">
